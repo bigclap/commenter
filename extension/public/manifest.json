@@ -1,0 +1,14 @@
+{
+  "name": "Commenter",
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "Turns the page red when you click the icon",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "build/service-worker.js"
+  },
+  "action": {"default_popup": "popup.html"}
+}

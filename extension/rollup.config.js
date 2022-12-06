@@ -84,12 +84,12 @@ export default [
     },
   },
   {
-    input: 'src/embeded/index.ts',
+    input: 'src/embedded/index.ts',
     output: {
       sourcemap: true,
       format: 'iife',
       name: 'app',
-      file: 'public/build/embeded.js',
+      file: 'public/build/embedded.js',
     },
     plugins: [
       svelte({
@@ -101,7 +101,7 @@ export default [
       }),
       // we'll extract any component CSS out into
       // a separate file - better for performance
-      css({ output: 'embeded.css' }),
+      css({ output: 'embedded.css' }),
 
       // If you have external dependencies installed from
       // npm, you'll most likely need these plugins. In

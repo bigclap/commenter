@@ -5,10 +5,22 @@
   "description": "Turns the page red when you click the icon",
   "permissions": [
     "activeTab",
-    "scripting"
+    "scripting",
+    "contextMenus"
   ],
   "background": {
     "service_worker": "build/service-worker.js"
   },
-  "action": {"default_popup": "popup.html"}
+  "action": {"default_popup": "popup.html"},
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["build/embedded.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "build/*.css", "build/*.js.map"],
+      "matches": ["<all_urls>"]
+    }]
 }
